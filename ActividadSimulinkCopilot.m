@@ -23,7 +23,7 @@ open_system("copilot_closed_loop");
 %[text]     - cómo sus parámetros podrían influir en la respuesta del sistema.
 %[text] - ![](text:image:4122)**Prompt sugerido:** *¿Qué función cumple el bloque Transfer Fcn en este modelo y qué valores de numerador y denominador se están utilizando? Explica brevemente cómo estos parámetros representan la dinámica del sistema.* \
 %%
-%[text] ## Misión 3:  Exploraremos un modelo 
+%[text] ## Misión 3:  Exploraremos un modelo con errores
 %[text] - **Objetivo:** Usa Simulink Copilot para interpretar un error de simulación, identificar el bloque o parámetro que lo provoca y determinar qué elemento debes corregir primero.
 %[text] - **Acción:** Abre el modelo [*copilot\_closed\_loop\_broken.slx*](file:.\\copilot_closed_loop_broken.slx) haciendo clic en el hipervínculo o ejecuta esta sección y mantenlo como modelo activo.
 %[text]     - Haz clic en Run ![](text:image:6008)para ejecutar la simulación.
@@ -33,14 +33,14 @@ open_system("copilot_closed_loop_broken");
 %[text] - ![](text:image:11a0)**Prompt sugerido:** *Explícame este error, identifica su causa y dime qué elemento del modelo debería revisar o corregir primero.* \
 %%
 %[text] ## Genera un modelo usando Simulink Copilot de guía
-%[text] - Usa Simulink Copilot para generar los pasos para crear un modelo sencillo a partir de una descripción en lenguaje natural \
+%[text] - **Objetivo:** Usa Simulink Copilot para generar los pasos para crear un modelo sencillo a partir de una descripción en lenguaje natural.
+%[text] - **Acción:** Ejecuta esta sección y antes de consultar a Simulink Copilot, analiza el objetivo e intenta anticipar: qué bloque podría generar la señal sinusoidal, qué bloque podría escalar la señal, qué bloque permitiría visualizar la entrada y la salida, cómo deberían conectarse los bloques y qué parámetros sería necesario configurar. \
 if bdIsLoaded("copilot_prompt_scratch")
     close_system("copilot_prompt_scratch", 0);
 end
 new_system("copilot_prompt_scratch");
 open_system("copilot_prompt_scratch");
-%[text] - ![](text:image:6407)**Prompt sugerido:** *Crea un modelo que genere una señal sinusoidal, la multiplique por una ganancia y muestre la señal de entrada y la señal de salida para poder compararlas.* \
-%[text]  
+%[text] - ![](text:image:6407)**Prompt sugerido:***¿Cómo puedo crear un modelo que genere una señal sinusoidal, la multiplique por una ganancia y muestre la señal de entrada y la señal de salida para poder compararlas?* \
 
 %[appendix]{"version":"1.0"}
 %---
