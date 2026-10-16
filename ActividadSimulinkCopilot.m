@@ -32,7 +32,7 @@ open_system("copilot_closed_loop");
 open_system("copilot_closed_loop_broken");
 %[text] - ![](text:image:11a0)**Prompt sugerido:** *Explícame este error, identifica su causa y dime qué elemento del modelo debería revisar o corregir primero.* \
 %%
-%[text] ## Genera un modelo usando Simulink Copilot de guía
+%[text] ## Misión 4: Genera un modelo usando Simulink Copilot de guía
 %[text] - **Objetivo:** Usa Simulink Copilot para generar los pasos para crear un modelo sencillo a partir de una descripción en lenguaje natural.
 %[text] - **Acción:** Ejecuta esta sección y antes de consultar a Simulink Copilot, analiza el objetivo e intenta anticipar: qué bloque podría generar la señal sinusoidal, qué bloque podría escalar la señal, qué bloque permitiría visualizar la entrada y la salida, cómo deberían conectarse los bloques y qué parámetros sería necesario configurar. \
 if bdIsLoaded("copilot_prompt_scratch")

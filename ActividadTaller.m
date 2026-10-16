@@ -1,11 +1,10 @@
 %[text] # Enfriamiento del Café: Modelado del Cambio de Temperatura
 %[text] En esta actividad, usarás datos medidos de la temperatura del café para modelar su enfriamiento a lo largo del tiempo y comparar cómo distintos tipos de tazas afectan el tiempo que tarda el café en alcanzar una temperatura adecuada para beber.
 %[text] **Objetivo** **de** **aprendizaje:** Aprender a modelar datos de enfriamiento utilizando MATLAB.
-%[text:tableOfContents]{"heading":"Contents"}
+%[text:tableOfContents]{"heading":"Tabla de contenidos"}
 %[text] - Explora los datos experimentales.
 %[text] - Ajusta un modelo de enfriamiento.
 %[text] - Compara diferentes tipos de tazas.
-%[text] - Crea una animación del proceso de enfriamiento.
 %[text] - Resume tus resultados. \
 %%
 %[text] ## **Pregunta inicial**
@@ -19,7 +18,7 @@ tiempoMinutos = [0 1 2 3 8 13 18 23 28 33 38 43 48]';
 temperaturaCafeC = [85.6, 81.7, 79.4, 77.2, 68.9, 62.2, 57.2, 52.8, 48.9, 46.7, 43.9, 41.7, 40.0]';
 temperaturaAmbienteC = 21.7;
 coffeeData = table(tiempoMinutos,temperaturaCafeC,VariableNames=["tiempoMinutos","temperaturaCafeC"])
-plot(tiempoMinutos,temperaturaCafeC)
+plot(tiempoMinutos,temperaturaCafeC,'o')
 grid on
 xlabel("Tiempo (minutos)")
 ylabel("Temperatura del café (Grados C)")
@@ -50,9 +49,9 @@ grid on
 xlabel("Tiempo (minutos)")
 ylabel("Temperatura del café (°C)")
 title("Datos experimentales y modelo de enfriamiento ajustado")
+yline(temperaturaObjetivoC, ":", "Temperatura objetivo")
 legend("Datos experimentales", "Modelo de enfriamiento", ...
     Location="northeast")
-yline(temperaturaObjetivoC, ":", "Temperatura objetivo")
 resumenModelo = table( ...
     tasaEnfriamientoPorMin, minutosHastaObjetivo, temperaturaDespues30MinC, ...
     VariableNames=["TasaEnfriamientoPorMin", ...
@@ -97,10 +96,8 @@ resultadosEscenarios = table( ...
     temperaturaDespues30MinC, ...
     VariableNames=["Escenario", ...
     "TasaEnfriamientoPorMin", ...
-    "MinutosHasta60C", ...
+    "MinutosHastaTempObjetivo", ...
     "TemperaturaDespues30MinC"])
-
-colororder(paletaEscenarios(height(configuracionEscenarios)))
 plot(tiempoEscenarios, temperaturaEscenariosC, LineWidth=1.8)
 grid on
 
@@ -108,8 +105,8 @@ xlabel("Tiempo (minutos)")
 ylabel("Temperatura del café (°C)")
 title("Comparación de escenarios de enfriamiento")
 subtitle("Las distintas tasas de enfriamiento producen diferentes tiempos de espera")
-legend(configuracionEscenarios.Escenario, Location="northeast")
 yline(temperaturaObjetivoC, ":", "Temperatura objetivo")
+legend(configuracionEscenarios.Escenario, Location="northeast")
 %[text] Compara los resultados de cada escenario y responde las siguientes preguntas:
 %[text] - ¿Qué escenario alcanza primero la **temperatura** **objetivo** **de** **60** **°C**?
 %[text] - ¿Qué escenario mantiene la temperatura más alta después de **30** **minutos**? \
@@ -119,27 +116,6 @@ yline(temperaturaObjetivoC, ":", "Temperatura objetivo")
 %[text] Los datos experimentales muestran que la temperatura del café sigue un patrón de enfriamiento en el que se aproxima gradualmente a la temperatura ambiente.
 %[text] Al comparar los distintos escenarios, observaste que una **tasa de enfriamiento mayor** permite que el café alcance la **temperatura objetivo** más rápidamente, mientras que una **tasa de enfriamiento menor** mantiene el café caliente durante más tiempo.
 %[text] Una limitación de este análisis es que los escenarios de las distintas tazas están simplificados. Para obtener conclusiones más sólidas sobre una taza convencional, una taza térmica o un vaso de papel reales, necesitarías recopilar y analizar datos experimentales para cada uno de esos casos.
-%%
-%[text] ## **Funciones auxiliares**
-%[text] Estas funciones se utilizan para la conversión de temperatura, la definición de colores para los escenarios y la creación de la animación.
-function paleta = paletaEscenarios(numeroEscenarios)
-
-    paletaBase = [ ...
-        0.70 0.26 0.12;
-        0.04 0.35 0.70;
-        0.43 0.43 0.43;
-        0.10 0.52 0.30;
-        0.58 0.30 0.70;
-        0.84 0.55 0.10];
-    
-    if numeroEscenarios <= size(paletaBase,1)
-        paleta = paletaBase(1:numeroEscenarios,:);
-    else
-        paleta = lines(numeroEscenarios);
-        paleta(1:size(paletaBase,1),:) = paletaBase;
-    end
-
-end
 
 %[appendix]{"version":"1.0"}
 %---
