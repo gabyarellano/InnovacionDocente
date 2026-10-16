@@ -10,7 +10,7 @@ En esta actividad explorarás MATLAB Copilot a través de un ejercicio práctico
 
 - ### 📘 [Instrucciones](https://content.mathworks.com/viewer/b5f4bbecf0e85e349d42cd231d140a4f)
 
-- ### 📄 Archivo principal 👉[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=gabyarellano/InnovacionDocente&file=ActividadTaller.m)
+- ### 📄 [Archivo principal](https://matlab.mathworks.com/open/github/v1?repo=gabyarellano/InnovacionDocente&file=ActividadTaller.m) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=gabyarellano/InnovacionDocente&file=ActividadTaller.m)
 
 ## 🤖 Simulink Copilot
 
@@ -18,5 +18,5 @@ En esta actividad explorarás Simulink Copilot y cómo puede ayudarte a trabajar
 
 - ### 📘 [Instrucciones](https://content.mathworks.com/viewer/75f718d54cca08cad502381fb3ec0b76) 
 
-- ### 📄 Archivo principal 👉[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=gabyarellano/InnovacionDocente&file=ActividadSimulinkCopilot.m)
+- ### 📄 [Archivo principal](https://matlab.mathworks.com/open/github/v1?repo=gabyarellano/InnovacionDocente&file=ActividadSimulinkCopilot.m) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=gabyarellano/InnovacionDocente&file=ActividadSimulinkCopilot.m)
 
