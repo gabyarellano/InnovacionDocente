@@ -18,7 +18,5 @@ En esta actividad explorarás Simulink Copilot y cómo puede ayudarte a trabajar
 
 ### 📘 [Instrucciones](https://content.mathworks.com/viewer/75f718d54cca08cad502381fb3ec0b76) 
 
-👉 [Abrir instrucciones de Simulink Copilot]
-
 ### 📄 Archivo principal [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=gabyarellano/InnovacionDocente&file=ActividadSimulinkCopilot.m)
 
